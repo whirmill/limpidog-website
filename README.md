@@ -1,6 +1,6 @@
 # Snip & Shine - Toeletta Mobile per Animali
 
-Una bellissima landing page responsive per un servizio di toeletta mobile per animali costruita con Express.js, caratterizzata da un design moderno con palette di colori lilla e tiffany.
+Una bellissima landing page responsive per un servizio di toeletta mobile per animali costruita con Express.js, caratterizzata da un design moderno con palette di colori lilla e tiffany. **Completamente compatibile con GitHub Pages**.
 
 ## Caratteristiche
 
@@ -10,6 +10,7 @@ Una bellissima landing page responsive per un servizio di toeletta mobile per an
 - ✨ Animazioni fluide e effetti hover
 - 🎯 Struttura SEO-friendly
 - 🚀 Caricamento veloce con asset ottimizzati
+- 🌐 **GitHub Pages ready** - Deploy automatico
 
 ## Color Palette
 
@@ -51,12 +52,13 @@ pnpm dev
 
 ```
 snip-and-shine-website/
-├── public/
-│   ├── index.html          # File HTML principale
-│   ├── styles.css          # Stili CSS con palette lilla/tiffany
-│   └── script.js           # Funzionalità JavaScript
-├── server.js               # Server Express
+├── index.html              # File HTML principale
+├── styles.css              # Stili CSS con palette lilla/tiffany
+├── script.js               # Funzionalità JavaScript
+├── images/                 # Immagini del sito
+├── server.js               # Server Express (solo per sviluppo)
 ├── package.json            # Dipendenze e script
+├── .github/workflows/      # GitHub Actions per deploy automatico
 └── README.md              # Questo file
 ```
 
@@ -64,7 +66,49 @@ snip-and-shine-website/
 
 - `npm start` - Avvia il server di produzione
 - `npm run dev` - Avvia il server di sviluppo con nodemon
+- `npm run build` - Verifica che i file statici siano pronti per GitHub Pages
+- `npm run preview` - Anteprima del sito in produzione
 - `npm test` - Esegue i test (placeholder)
+
+## Deployment su GitHub Pages
+
+### Metodo 1: Deploy Automatico (Raccomandato)
+
+1. **Crea un repository su GitHub** con il nome `snip-and-shine-website`
+2. **Pusha il codice** al repository:
+
+```bash
+git remote add origin https://github.com/TUO_USERNAME/snip-and-shine-website.git
+git push -u origin main
+```
+
+3. **Abilita GitHub Pages** nelle impostazioni del repository:
+   - Vai in Settings → Pages
+   - Source: "Deploy from a branch"
+   - Branch: `main`
+   - Folder: `/ (root)`
+   - Clicca "Save"
+
+4. **Il sito sarà disponibile su**: `https://TUO_USERNAME.github.io/snip-and-shine-website`
+
+### Metodo 2: Deploy Manuale
+
+1. **Crea il branch gh-pages**:
+
+```bash
+git checkout -b gh-pages
+git push origin gh-pages
+```
+
+2. **Configura GitHub Pages** per usare il branch `gh-pages`
+
+### GitHub Actions
+
+Il repository include un workflow automatico che:
+
+- ✅ Verifica che tutti i file statici siano presenti
+- 🚀 Deploy automatico su ogni push al branch `main`
+- 🔄 Aggiornamento automatico del sito
 
 ## Dettagli delle Funzionalità
 
@@ -78,9 +122,10 @@ snip-and-shine-website/
 - **Sezione Contatti**: Informazioni di contatto e link WhatsApp
 - **Footer**: Link, social media e informazioni aziendali
 
-### Backend
+### Backend (Solo Sviluppo)
 
-- **Server Express**: Serve file statici
+- **Server Express**: Serve file statici dalla root directory
+- **GitHub Pages Compatible**: File serviti dalla root per compatibilità
 - **Server Semplice**: Nessun endpoint di form, tutto gestito via WhatsApp
 
 ### Funzionalità Interattive
@@ -96,11 +141,11 @@ snip-and-shine-website/
 
 ### Colori
 
-La palette di colori è definita nelle variabili CSS all'inizio di `public/styles.css`. Puoi facilmente modificare i colori cambiando i valori nella sezione `:root`.
+La palette di colori è definita nelle variabili CSS all'inizio di `styles.css`. Puoi facilmente modificare i colori cambiando i valori nella sezione `:root`.
 
 ### Contenuto
 
-- Aggiorna le informazioni aziendali in `public/index.html`
+- Aggiorna le informazioni aziendali in `index.html`
 - Modifica prezzi e descrizioni dei servizi
 - Cambia i dettagli di contatto e l'area di servizio
 - Aggiorna i link dei social media
@@ -108,7 +153,7 @@ La palette di colori è definita nelle variabili CSS all'inizio di `public/style
 
 ### Styling
 
-- Modifica `public/styles.css` per cambiare il design
+- Modifica `styles.css` per cambiare il design
 - Aggiungi animazioni personalizzate nel CSS
 - Regola i breakpoint responsive secondo necessità
 
@@ -120,15 +165,17 @@ La palette di colori è definita nelle variabili CSS all'inizio di `public/style
 npm run dev
 ```
 
-### Produzione
+### Produzione (GitHub Pages)
 
 ```bash
-npm start
+# Push al repository GitHub
+git push origin main
+# Il sito si aggiorna automaticamente
 ```
 
 ### Variabili d'Ambiente
 
-- `PORT`: Porta del server (default: 3000)
+- `PORT`: Porta del server (default: 3000) - solo per sviluppo locale
 
 ## Supporto Browser
 
@@ -140,12 +187,13 @@ npm start
 
 ## Tecnologie Utilizzate
 
-- **Backend**: Node.js, Express.js
+- **Backend**: Node.js, Express.js (solo sviluppo)
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Styling**: CSS Grid, Flexbox, CSS Variables
 - **Icone**: Font Awesome
 - **Font**: Google Fonts (Poppins)
 - **Integrazione**: WhatsApp Business API
+- **Deploy**: GitHub Pages, GitHub Actions
 
 ## Licenza
 

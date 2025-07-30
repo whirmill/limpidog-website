@@ -1,17 +1,21 @@
 {
   "name": "snip-and-shine-website",
   "version": "1.0.0",
-  "description": "Mobile pet grooming service landing page",
+  "description": "Mobile pet grooming service landing page - GitHub Pages compatible",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
+    "build": "echo 'No build step needed - static files ready for GitHub Pages'",
+    "preview": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "pet grooming",
     "mobile service",
-    "landing page"
+    "landing page",
+    "github-pages",
+    "static-site"
   ],
   "author": "",
   "license": "ISC",
