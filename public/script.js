@@ -101,15 +101,8 @@ document.querySelectorAll(".service-card").forEach((card) => {
   });
 });
 
-// Parallax effect for hero section
-window.addEventListener("scroll", () => {
-  const scrolled = window.pageYOffset;
-  const hero = document.querySelector(".hero");
-  if (hero) {
-    const rate = scrolled * -0.5;
-    hero.style.transform = `translateY(${rate}px)`;
-  }
-});
+// Parallax effect for hero section (DISABLED)
+// window.addEventListener("scroll", () => {});
 
 // Auto-hide mobile menu when clicking outside
 document.addEventListener("click", (e) => {
