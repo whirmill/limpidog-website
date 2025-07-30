@@ -128,10 +128,32 @@ body {
 /* Hero Section */
 .hero {
   min-height: 100vh;
-  background: var(--gradient-secondary);
   display: flex;
   align-items: center;
   padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--tiffany-light), var(--lilla-light)),
+    url("images/hero-bg.jpg") center/cover;
+  z-index: -2;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(168, 230, 224, 0.9), rgba(177, 156, 217, 0.9));
+  z-index: -1;
 }
 
 .hero-container {
@@ -203,6 +225,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .hero-card {
@@ -212,6 +235,17 @@ body {
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   transform: rotate(5deg);
+  animation: cardFloat 4s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: rotate(5deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(5deg) translateY(-10px);
+  }
 }
 
 .hero-logo {
@@ -228,6 +262,55 @@ body {
 
 .hero-card p {
   color: var(--gray);
+}
+
+.hero-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-element {
+  position: absolute;
+  color: var(--white);
+  opacity: 0.3;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element i {
+  font-size: 2rem;
+}
+
+.floating-1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-2 {
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.floating-3 {
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
 }
 
 /* Services Section */
