@@ -29,96 +29,28 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Booking Form Handler
-const bookingForm = document.getElementById("bookingForm");
-if (bookingForm) {
-  bookingForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
+// WhatsApp functionality
+function openWhatsApp(message = "") {
+  const phoneNumber = "393200522632";
+  const defaultMessage =
+    message || "Ciao! Vorrei informazioni sui vostri servizi di toeletta mobile.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
+  window.open(whatsappUrl, "_blank");
+}
 
-    const formData = new FormData(bookingForm);
-    const data = Object.fromEntries(formData);
-
-    try {
-      const response = await fetch("/book", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        showMessage(bookingForm, result.message, "success");
-        bookingForm.reset();
-      } else {
-        showMessage(bookingForm, "There was an error. Please try again.", "error");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      showMessage(bookingForm, "There was an error. Please try again.", "error");
-    }
+// Add click handlers for WhatsApp buttons
+document.addEventListener("DOMContentLoaded", () => {
+  const whatsappButtons = document.querySelectorAll(".btn-whatsapp");
+  whatsappButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      // Add a small delay to show the click effect
+      setTimeout(() => {
+        const message = button.getAttribute("data-message") || "";
+        openWhatsApp(message);
+      }, 100);
+    });
   });
-}
-
-// Contact Form Handler
-const contactForm = document.getElementById("contactForm");
-if (contactForm) {
-  contactForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-
-    try {
-      const response = await fetch("/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        showMessage(contactForm, result.message, "success");
-        contactForm.reset();
-      } else {
-        showMessage(contactForm, "There was an error. Please try again.", "error");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      showMessage(contactForm, "There was an error. Please try again.", "error");
-    }
-  });
-}
-
-// Show success/error messages
-function showMessage(form, message, type) {
-  // Remove existing messages
-  const existingMessage = form.querySelector(".success-message, .error-message");
-  if (existingMessage) {
-    existingMessage.remove();
-  }
-
-  // Create new message
-  const messageDiv = document.createElement("div");
-  messageDiv.className = type === "success" ? "success-message" : "error-message";
-  messageDiv.textContent = message;
-
-  // Insert message before the submit button
-  const submitButton = form.querySelector('button[type="submit"]');
-  form.insertBefore(messageDiv, submitButton);
-
-  // Auto-remove message after 5 seconds
-  setTimeout(() => {
-    if (messageDiv.parentNode) {
-      messageDiv.remove();
-    }
-  }, 5000);
-}
+});
 
 // Navbar background change on scroll
 window.addEventListener("scroll", () => {
@@ -158,56 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Set minimum date for booking form
-document.addEventListener("DOMContentLoaded", () => {
-  const dateInput = document.getElementById("date");
-  if (dateInput) {
-    const today = new Date().toISOString().split("T")[0];
-    dateInput.min = today;
-  }
-});
-
-// Form validation
-function validateForm(form) {
-  const inputs = form.querySelectorAll("input[required], select[required], textarea[required]");
-  let isValid = true;
-
-  inputs.forEach((input) => {
-    if (!input.value.trim()) {
-      input.style.borderColor = "#c62828";
-      isValid = false;
-    } else {
-      input.style.borderColor = "#E9ECEF";
-    }
-  });
-
-  return isValid;
-}
-
-// Add validation to forms
-[bookingForm, contactForm].forEach((form) => {
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      if (!validateForm(form)) {
-        e.preventDefault();
-        showMessage(form, "Please fill in all required fields.", "error");
-      }
-    });
-  }
-});
-
-// Phone number formatting
-const phoneInputs = document.querySelectorAll('input[type="tel"]');
-phoneInputs.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let value = e.target.value.replace(/\D/g, "");
-    if (value.length > 0) {
-      value = value.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
-    }
-    e.target.value = value;
-  });
-});
-
 // Service card hover effects
 document.querySelectorAll(".service-card").forEach((card) => {
   card.addEventListener("mouseenter", () => {
@@ -216,23 +98,6 @@ document.querySelectorAll(".service-card").forEach((card) => {
 
   card.addEventListener("mouseleave", () => {
     card.style.transform = "translateY(0) scale(1)";
-  });
-});
-
-// Loading animation for buttons
-document.querySelectorAll(".btn").forEach((button) => {
-  button.addEventListener("click", function () {
-    if (this.type === "submit") {
-      const originalText = this.textContent;
-      this.textContent = "Processing...";
-      this.disabled = true;
-
-      // Re-enable button after form submission
-      setTimeout(() => {
-        this.textContent = originalText;
-        this.disabled = false;
-      }, 3000);
-    }
   });
 });
 

@@ -1,15 +1,15 @@
-# Snip & Shine - Mobile Pet Grooming Landing Page
+# Snip & Shine - Toeletta Mobile per Animali
 
-A beautiful, responsive landing page for a mobile pet grooming service built with Express.js, featuring a modern design with a lilla and tiffany color palette.
+Una bellissima landing page responsive per un servizio di toeletta mobile per animali costruita con Express.js, caratterizzata da un design moderno con palette di colori lilla e tiffany.
 
-## Features
+## Caratteristiche
 
-- 🎨 Modern, responsive design with lilla and tiffany color palette
-- 📱 Mobile-first approach with hamburger navigation
-- 📝 Interactive booking and contact forms
-- ✨ Smooth animations and hover effects
-- 🎯 SEO-friendly structure
-- 🚀 Fast loading with optimized assets
+- 🎨 Design moderno e responsive con palette di colori lilla e tiffany
+- 📱 Approccio mobile-first con navigazione hamburger
+- 💬 Integrazione WhatsApp per prenotazioni e contatti
+- ✨ Animazioni fluide e effetti hover
+- 🎯 Struttura SEO-friendly
+- 🚀 Caricamento veloce con asset ottimizzati
 
 ## Color Palette
 
@@ -20,137 +20,137 @@ A beautiful, responsive landing page for a mobile pet grooming service built wit
 - **Tiffany Light**: #A8E6E0
 - **Tiffany Dark**: #5BC0BE
 
-## Installation
+## Installazione
 
-1. Clone the repository:
+1. Clona il repository:
 
 ```bash
 git clone <repository-url>
 cd snip-and-shine-website
 ```
 
-2. Install dependencies:
+2. Installa le dipendenze:
 
 ```bash
 npm install
-# or
+# oppure
 pnpm install
 ```
 
-3. Start the development server:
+3. Avvia il server di sviluppo:
 
 ```bash
 npm run dev
-# or
+# oppure
 pnpm dev
 ```
 
-4. Open your browser and navigate to `http://localhost:3000`
+4. Apri il browser e vai su `http://localhost:3000`
 
-## Project Structure
+## Struttura del Progetto
 
 ```
 snip-and-shine-website/
 ├── public/
-│   ├── index.html          # Main HTML file
-│   ├── styles.css          # CSS styles with lilla/tiffany palette
-│   └── script.js           # JavaScript functionality
-├── server.js               # Express server
-├── package.json            # Dependencies and scripts
-└── README.md              # This file
+│   ├── index.html          # File HTML principale
+│   ├── styles.css          # Stili CSS con palette lilla/tiffany
+│   └── script.js           # Funzionalità JavaScript
+├── server.js               # Server Express
+├── package.json            # Dipendenze e script
+└── README.md              # Questo file
 ```
 
-## Available Scripts
+## Script Disponibili
 
-- `npm start` - Start the production server
-- `npm run dev` - Start the development server with nodemon
-- `npm test` - Run tests (placeholder)
+- `npm start` - Avvia il server di produzione
+- `npm run dev` - Avvia il server di sviluppo con nodemon
+- `npm test` - Esegue i test (placeholder)
 
-## Features Breakdown
+## Dettagli delle Funzionalità
 
 ### Frontend
 
-- **Responsive Navigation**: Fixed navbar with mobile hamburger menu
-- **Hero Section**: Eye-catching gradient background with call-to-action buttons
-- **Services Section**: Grid layout showcasing grooming services with pricing
-- **About Section**: Features highlighting the benefits of mobile grooming
-- **Booking Form**: Interactive form for appointment scheduling
-- **Contact Section**: Contact information and message form
-- **Footer**: Links, social media, and company information
+- **Navigazione Responsive**: Navbar fissa con menu hamburger mobile
+- **Sezione Hero**: Sfondo gradiente accattivante con pulsanti call-to-action
+- **Sezione Servizi**: Layout a griglia che mostra i servizi di toeletta con prezzi
+- **Sezione Chi Siamo**: Caratteristiche che evidenziano i vantaggi della toeletta mobile
+- **Sezione WhatsApp**: Integrazione diretta con WhatsApp per prenotazioni
+- **Sezione Contatti**: Informazioni di contatto e link WhatsApp
+- **Footer**: Link, social media e informazioni aziendali
 
 ### Backend
 
-- **Express Server**: Serves static files and handles form submissions
-- **Form Endpoints**: `/contact` and `/book` endpoints for form processing
-- **JSON Responses**: Proper API responses for form submissions
+- **Server Express**: Serve file statici
+- **Server Semplice**: Nessun endpoint di form, tutto gestito via WhatsApp
 
-### Interactive Features
+### Funzionalità Interattive
 
-- Smooth scrolling navigation
-- Form validation and submission
-- Success/error message display
-- Mobile menu toggle
-- Scroll animations
-- Hover effects
-- Phone number formatting
+- Navigazione con scroll fluido
+- Integrazione WhatsApp diretta
+- Toggle menu mobile
+- Animazioni allo scroll
+- Effetti hover
+- Pulsanti WhatsApp con messaggi predefiniti
 
-## Customization
+## Personalizzazione
 
-### Colors
+### Colori
 
-The color palette is defined in CSS variables at the top of `public/styles.css`. You can easily modify the colors by changing the values in the `:root` section.
+La palette di colori è definita nelle variabili CSS all'inizio di `public/styles.css`. Puoi facilmente modificare i colori cambiando i valori nella sezione `:root`.
 
-### Content
+### Contenuto
 
-- Update the business information in `public/index.html`
-- Modify service prices and descriptions
-- Change contact details and service area
-- Update social media links
+- Aggiorna le informazioni aziendali in `public/index.html`
+- Modifica prezzi e descrizioni dei servizi
+- Cambia i dettagli di contatto e l'area di servizio
+- Aggiorna i link dei social media
+- Modifica il numero WhatsApp in tutti i link
 
 ### Styling
 
-- Modify `public/styles.css` to change the design
-- Add custom animations in the CSS
-- Adjust responsive breakpoints as needed
+- Modifica `public/styles.css` per cambiare il design
+- Aggiungi animazioni personalizzate nel CSS
+- Regola i breakpoint responsive secondo necessità
 
 ## Deployment
 
-### Local Development
+### Sviluppo Locale
 
 ```bash
 npm run dev
 ```
 
-### Production
+### Produzione
 
 ```bash
 npm start
 ```
 
-### Environment Variables
+### Variabili d'Ambiente
 
-- `PORT`: Server port (default: 3000)
+- `PORT`: Porta del server (default: 3000)
 
-## Browser Support
+## Supporto Browser
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
+- Chrome (ultima versione)
+- Firefox (ultima versione)
+- Safari (ultima versione)
+- Edge (ultima versione)
+- Browser mobili
 
-## Technologies Used
+## Tecnologie Utilizzate
 
 - **Backend**: Node.js, Express.js
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Styling**: CSS Grid, Flexbox, CSS Variables
-- **Icons**: Font Awesome
-- **Fonts**: Google Fonts (Poppins)
+- **Icone**: Font Awesome
+- **Font**: Google Fonts (Poppins)
+- **Integrazione**: WhatsApp Business API
 
-## License
+## Licenza
 
 ISC License
 
-## Support
+## Supporto
 
-For support or questions, please contact the development team.
+Per supporto o domande, contatta il team di sviluppo.

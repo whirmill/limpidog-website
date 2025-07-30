@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snip & Shine - Mobile Pet Grooming</title>
+    <title>Snip & Shine - Toeletta Mobile per Animali</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -16,15 +16,19 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-cut"></i>
-                <span>Snip & Shine</span>
+                <img src="logo.png" alt="Snip & Shine Logo" class="nav-logo-img">
+                <span class="nav-logo-text">
+                    <span class="snip">Snip</span> & <span class="shine">Shine</span>
+                </span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#book" class="book-btn">Book Now</a></li>
+                <li><a href="#services">Servizi</a></li>
+                <li><a href="#about">Chi Siamo</a></li>
+                <li><a href="#contact">Contatti</a></li>
+                <li><a href="https://wa.me/393200522632" class="book-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -38,19 +42,21 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Professional Mobile Pet Grooming</h1>
-                <p>Bringing luxury pet grooming services right to your doorstep. Your pets deserve the best care in the
-                    comfort of their own home.</p>
+                <h1>Toeletta Mobile Professionale per Animali</h1>
+                <p>Portiamo servizi di toeletta di lusso direttamente a casa tua. I tuoi animali domestici meritano le
+                    migliori cure nel comfort della propria casa.</p>
                 <div class="hero-buttons">
-                    <a href="#book" class="btn btn-primary">Book Appointment</a>
-                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                    <a href="https://wa.me/393200522632" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Prenota su WhatsApp
+                    </a>
+                    <a href="#services" class="btn btn-secondary">I Nostri Servizi</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="hero-card">
-                    <i class="fas fa-paw"></i>
-                    <h3>Mobile Service</h3>
-                    <p>We come to you!</p>
+                    <img src="logo.png" alt="Snip & Shine Logo" class="hero-logo">
+                    <h3>Servizio Mobile</h3>
+                    <p>Veniamo da te!</p>
                 </div>
             </div>
         </div>
@@ -59,40 +65,40 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2>I Nostri Servizi</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-bath"></i>
                     </div>
-                    <h3>Bath & Brush</h3>
-                    <p>Complete bath with premium shampoo, conditioning, and thorough brushing for a healthy, shiny
-                        coat.</p>
-                    <span class="price">From $45</span>
+                    <h3>Bagno & Spazzolatura</h3>
+                    <p>Bagno completo con shampoo premium, balsamo e spazzolatura accurata per un mantello sano e
+                        lucido.</p>
+                    <span class="price">Da €45</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-cut"></i>
                     </div>
-                    <h3>Full Grooming</h3>
-                    <p>Complete grooming package including bath, haircut, nail trimming, and ear cleaning.</p>
-                    <span class="price">From $65</span>
+                    <h3>Toeletta Completa</h3>
+                    <p>Pacchetto completo di toeletta inclusi bagno, taglio, limatura unghie e pulizia orecchie.</p>
+                    <span class="price">Da €65</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-hand-sparkles"></i>
                     </div>
-                    <h3>Nail Trim & File</h3>
-                    <p>Professional nail trimming and filing to keep your pet's paws healthy and comfortable.</p>
-                    <span class="price">From $25</span>
+                    <h3>Limatura Unghie</h3>
+                    <p>Limatura professionale delle unghie per mantenere le zampe del tuo animale sane e comode.</p>
+                    <span class="price">Da €25</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-ear"></i>
                     </div>
-                    <h3>Ear Cleaning</h3>
-                    <p>Gentle ear cleaning to prevent infections and maintain optimal ear health.</p>
-                    <span class="price">From $20</span>
+                    <h3>Pulizia Orecchie</h3>
+                    <p>Pulizia delicata delle orecchie per prevenire infezioni e mantenere una salute ottimale.</p>
+                    <span class="price">Da €20</span>
                 </div>
             </div>
         </div>
@@ -103,167 +109,140 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Why Choose Snip & Shine?</h2>
+                    <h2>Perché Scegliere Snip & Shine?</h2>
                     <div class="features">
                         <div class="feature">
                             <i class="fas fa-home"></i>
                             <div>
-                                <h4>Convenience</h4>
-                                <p>No more stressful car rides or waiting rooms. We bring the salon to you.</p>
+                                <h4>Comodità</h4>
+                                <p>Niente più viaggi stressanti in auto o sale d'attesa. Portiamo il salone direttamente
+                                    a casa tua in tutta Latina e provincia.</p>
                             </div>
                         </div>
                         <div class="feature">
                             <i class="fas fa-clock"></i>
                             <div>
-                                <h4>Flexible Scheduling</h4>
-                                <p>Book appointments that fit your schedule, including evenings and weekends.</p>
+                                <h4>Orari Flessibili</h4>
+                                <p>Prenota appuntamenti dal martedì al sabato dalle 9:00 alle 18:00, orari che si
+                                    adattano alle tue esigenze.</p>
                             </div>
                         </div>
                         <div class="feature">
                             <i class="fas fa-heart"></i>
                             <div>
-                                <h4>Personalized Care</h4>
-                                <p>One-on-one attention in a familiar environment reduces stress for your pet.</p>
+                                <h4>Cure Personalizzate</h4>
+                                <p>Attenzione individuale in un ambiente familiare riduce lo stress per il tuo animale.
+                                </p>
                             </div>
                         </div>
                         <div class="feature">
                             <i class="fas fa-shield-alt"></i>
                             <div>
-                                <h4>Professional Equipment</h4>
-                                <p>State-of-the-art mobile grooming van with all professional tools and products.</p>
+                                <h4>Attrezzatura Professionale</h4>
+                                <p>Furgone mobile di toeletta all'avanguardia che raggiunge tutta Latina e provincia con
+                                    tutti gli strumenti e prodotti professionali.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
                     <div class="image-placeholder">
-                        <i class="fas fa-van"></i>
-                        <p>Our Mobile Grooming Van</p>
+                        <img src="logo.png" alt="Snip & Shine Logo" class="about-logo">
+                        <p>Il Nostro Furgone di Toeletta<br>a Latina e Provincia</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Booking Section -->
-    <section id="book" class="booking">
+    <!-- WhatsApp Booking Section -->
+    <section id="book" class="whatsapp-booking">
         <div class="container">
-            <h2>Book Your Appointment</h2>
-            <form id="bookingForm" class="booking-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
+            <h2>Prenota il Tuo Appuntamento</h2>
+            <div class="whatsapp-content">
+                <div class="whatsapp-info">
+                    <div class="whatsapp-logo-section">
+                        <img src="logo.png" alt="Snip & Shine Logo" class="whatsapp-logo">
+                        <div class="whatsapp-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="phone">Phone *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="petType">Pet Type *</label>
-                        <select id="petType" name="petType" required>
-                            <option value="">Select Pet Type</option>
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="service">Service *</label>
-                        <select id="service" name="service" required>
-                            <option value="">Select Service</option>
-                            <option value="bath-brush">Bath & Brush</option>
-                            <option value="full-grooming">Full Grooming</option>
-                            <option value="nail-trim">Nail Trim & File</option>
-                            <option value="ear-cleaning">Ear Cleaning</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Preferred Date *</label>
-                        <input type="date" id="date" name="date" required>
+                    <h3>Prenotazione via WhatsApp</h3>
+                    <p>Per prenotare un appuntamento, contattaci direttamente su WhatsApp. Ti risponderemo entro pochi
+                        minuti per confermare la disponibilità e organizzare il servizio.</p>
+                    <div class="whatsapp-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-clock"></i>
+                            <span>Risposta rapida</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Prenotazione immediata</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-comments"></i>
+                            <span>Comunicazione diretta</span>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="time">Preferred Time *</label>
-                    <select id="time" name="time" required>
-                        <option value="">Select Time</option>
-                        <option value="09:00">9:00 AM</option>
-                        <option value="10:00">10:00 AM</option>
-                        <option value="11:00">11:00 AM</option>
-                        <option value="12:00">12:00 PM</option>
-                        <option value="13:00">1:00 PM</option>
-                        <option value="14:00">2:00 PM</option>
-                        <option value="15:00">3:00 PM</option>
-                        <option value="16:00">4:00 PM</option>
-                    </select>
+                <div class="whatsapp-action">
+                    <a href="https://wa.me/393200522632?text=Ciao! Vorrei prenotare un appuntamento per la toeletta del mio animale."
+                        class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Prenota su WhatsApp
+                    </a>
+                    <p class="whatsapp-note">Clicca per aprire WhatsApp e iniziare la conversazione</p>
                 </div>
-                <button type="submit" class="btn btn-primary">Book Appointment</button>
-            </form>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
+            <h2>Contattaci</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                        <i class="fab fa-whatsapp"></i>
                         <div>
-                            <h4>Phone</h4>
-                            <p>(555) 123-4567</p>
+                            <h4>WhatsApp</h4>
+                            <p>+39 320 052 2632</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-phone"></i>
                         <div>
-                            <h4>Email</h4>
-                            <p>info@snipandshine.com</p>
+                            <h4>Telefono</h4>
+                            <p>+39 320 052 2632</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Service Area</h4>
-                            <p>Greater Metropolitan Area</p>
+                            <h4>Zona di Servizio</h4>
+                            <p>Latina e Provincia</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
                         <div>
-                            <h4>Hours</h4>
-                            <p>Mon-Sat: 8AM-6PM<br>Sunday: 9AM-4PM</p>
+                            <h4>Orari</h4>
+                            <p>Mar-Sab: 9:00-18:00<br>Lunedì e Domenica: Chiuso</p>
                         </div>
                     </div>
                 </div>
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="contactName">Name *</label>
-                        <input type="text" id="contactName" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactEmail">Email *</label>
-                        <input type="email" id="contactEmail" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactPhone">Phone</label>
-                        <input type="tel" id="contactPhone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                <div class="contact-whatsapp">
+                    <img src="logo.png" alt="Snip & Shine Logo" class="contact-logo">
+                    <h3>Contattaci su WhatsApp</h3>
+                    <p>Per informazioni, preventivi o domande, contattaci direttamente su WhatsApp. Ti risponderemo il
+                        prima possibile!</p>
+                    <a href="https://wa.me/393200522632?text=Ciao! Vorrei informazioni sui vostri servizi di toeletta mobile."
+                        class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Scrivici su WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -274,31 +253,34 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <i class="fas fa-cut"></i>
-                        <span>Snip & Shine</span>
+                        <img src="logo.png" alt="Snip & Shine Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">
+                            <span class="snip">Snip</span> & <span class="shine">Shine</span>
+                        </span>
                     </div>
-                    <p>Professional mobile pet grooming services bringing luxury care to your doorstep.</p>
+                    <p>Servizi professionali di toeletta mobile per animali che portano cure di lusso direttamente a
+                        casa tua.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4>Link Rapidi</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#services">Servizi</a></li>
+                        <li><a href="#about">Chi Siamo</a></li>
+                        <li><a href="#contact">Contatti</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Services</h4>
+                    <h4>Servizi</h4>
                     <ul>
-                        <li>Bath & Brush</li>
-                        <li>Full Grooming</li>
-                        <li>Nail Trim</li>
-                        <li>Ear Cleaning</li>
+                        <li>Bagno & Spazzolatura</li>
+                        <li>Toeletta Completa</li>
+                        <li>Limatura Unghie</li>
+                        <li>Pulizia Orecchie</li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Follow Us</h4>
+                    <h4>Seguici</h4>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -307,12 +289,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Snip & Shine. All rights reserved.</p>
+                <p>&copy; 2025 Snip & Shine. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
+</html>
 
 </html>
