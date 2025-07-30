@@ -341,18 +341,21 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 
 .service-card {
   background: var(--white);
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 10px 30px var(--shadow);
   transition: transform 0.3s ease;
   border: 1px solid rgba(139, 95, 191, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .service-card:hover {
@@ -384,6 +387,7 @@ body {
 .service-card p {
   color: var(--gray);
   margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .price {
@@ -393,6 +397,7 @@ body {
   border-radius: 25px;
   font-weight: 600;
   font-size: 0.9rem;
+  margin-top: auto;
 }
 
 /* About Section */
@@ -749,7 +754,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hamburger {
     display: flex;
   }
@@ -801,7 +806,7 @@ body {
   }
 
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -820,6 +825,10 @@ body {
 
   .booking-form {
     padding: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 }
 
