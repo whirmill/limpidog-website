@@ -33,7 +33,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 function openWhatsApp(message = "") {
   const phoneNumber = "393200522632";
   const defaultMessage =
-    message || "Ciao! Vorrei informazioni sui vostri servizi di toeletta mobile.";
+    message || "Ciao! Vorrei informazioni sui vostri servizi di toelettatura mobile.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
   window.open(whatsappUrl, "_blank");
 }
