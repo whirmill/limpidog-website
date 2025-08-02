@@ -18,6 +18,6 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Snip & Shine server running on http://localhost:${PORT}`);
+  console.log(`LimpiDog server running on http://localhost:${PORT}`);
   console.log(`Server is GitHub Pages compatible - files served from root directory`);
 });

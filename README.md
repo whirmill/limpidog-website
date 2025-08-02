@@ -1,4 +1,4 @@
-# Snip & Shine - Toeletta Mobile per Animali
+# LimpiDog - Toeletta Mobile per Animali
 
 Una bellissima landing page responsive per un servizio di toeletta mobile per animali costruita con Express.js, caratterizzata da un design moderno con palette di colori lilla e tiffany. **Completamente compatibile con GitHub Pages**.
 
@@ -27,7 +27,7 @@ Una bellissima landing page responsive per un servizio di toeletta mobile per an
 
 ```bash
 git clone <repository-url>
-cd snip-and-shine-website
+cd limpidog-website
 ```
 
 2. Installa le dipendenze:
@@ -51,14 +51,15 @@ pnpm dev
 ## Struttura del Progetto
 
 ```
-snip-and-shine-website/
+limpidog-website/
 ├── index.html              # File HTML principale
 ├── styles.css              # Stili CSS con palette lilla/tiffany
 ├── script.js               # Funzionalità JavaScript
 ├── images/                 # Immagini del sito
+│   ├── logo.png            # Logo unico per tutto il sito
+│   └── hero-bg.png         # Immagine di sfondo hero (2048x2048)
 ├── server.js               # Server Express (solo per sviluppo)
 ├── package.json            # Dipendenze e script
-├── .github/workflows/      # GitHub Actions per deploy automatico
 └── README.md              # Questo file
 ```
 
@@ -74,11 +75,11 @@ snip-and-shine-website/
 
 ### Metodo 1: Deploy Automatico (Raccomandato)
 
-1. **Crea un repository su GitHub** con il nome `snip-and-shine-website`
+1. **Crea un repository su GitHub** con il nome `limpidog-website`
 2. **Pusha il codice** al repository:
 
 ```bash
-git remote add origin https://github.com/TUO_USERNAME/snip-and-shine-website.git
+git remote add origin https://github.com/TUO_USERNAME/limpidog-website.git
 git push -u origin main
 ```
 
@@ -89,7 +90,7 @@ git push -u origin main
    - Folder: `/ (root)`
    - Clicca "Save"
 
-4. **Il sito sarà disponibile su**: `https://TUO_USERNAME.github.io/snip-and-shine-website`
+4. **Il sito sarà disponibile su**: `https://TUO_USERNAME.github.io/limpidog-website`
 
 ### Metodo 2: Deploy Manuale
 
@@ -156,6 +157,27 @@ La palette di colori è definita nelle variabili CSS all'inizio di `styles.css`.
 - Modifica `styles.css` per cambiare il design
 - Aggiungi animazioni personalizzate nel CSS
 - Regola i breakpoint responsive secondo necessità
+
+### Brand Colors
+
+Il sito utilizza classi CSS per i colori del brand:
+
+- **`.limpi`**: Colore lilla (`var(--lilla-primary)`)
+- **`.dog`**: Colore tiffany (`var(--tiffany-primary)`)
+
+Esempio: `<span class="limpi">Limpi</span><span class="dog">Dog</span>`
+
+### Immagini
+
+Il sito utilizza un **logo unico** (`images/logo.png`) che viene ridimensionato automaticamente per diversi contesti:
+
+- **Navbar**: 50px height (con zoom 1.8x)
+- **Footer**: 60px height (con zoom 1.8x)
+- **About**: 200px width
+- **WhatsApp**: 120px width
+- **Contact**: 100px width
+
+Per sostituire il logo, sostituisci semplicemente il file `images/logo.png` mantenendo le stesse proporzioni.
 
 ## Deployment
 

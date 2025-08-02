@@ -1,7 +1,7 @@
 {
-  "name": "snip-and-shine-website",
+  "name": "limpidog-website",
   "version": "1.0.0",
-  "description": "Mobile pet grooming service landing page - GitHub Pages compatible",
+  "description": "LimpiDog - Mobile pet grooming service landing page - GitHub Pages compatible",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,6 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "limpidog",
     "pet grooming",
     "mobile service",
     "landing page",
